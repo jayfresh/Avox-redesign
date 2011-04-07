@@ -52,7 +52,7 @@
 						<h2>Your Search Results</h2>
 						<p>Use the form on the right to refine your results further or make a new search.</p>
 					</div>
-					<div id="searchBox" class="grid8col">
+					<form id="searchBox" class="grid8col">
 						<label for="query" class="grid3col marginright">Company Name / AVID</label>
 						<input id="query" type="text" class="grid3col" />
 						<div class="help">
@@ -61,9 +61,15 @@
 						<label for="branches">Include branches</label>
 						<input id="branches" type="checkbox" checked="checked" />
 						<div class="help">
-							<p>Check this box to include company branches in your search.</p>
+							<p>Check this box to include company branches in your search</p>
 						</div>
-					</div>
+						<span class="grid3col marginright">Add a Filter</span>
+						<button>+</button>
+						<div class="help">
+							<p>Click here to add extra rows to filter search results by, such as Entity Type and Operational Country</p>
+						</div>
+						<input type="submit" value="Search Wiki-Data" />
+					</form>
 				</div>
 	            <div class="push"></div>
 			</div>

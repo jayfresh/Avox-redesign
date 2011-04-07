@@ -52,7 +52,7 @@
 						<h2>Your Search Results</h2>
 						<p>Use the form on the right to refine your results further or make a new search.</p>
 					</div>
-					<form id="searchBox" class="grid8col">
+					<form id="searchBox" class="grid8col" action="/search" method="POST">
 						<label for="query" class="grid3col marginright">Company Name / AVID</label>
 						<input id="query" type="text" class="grid3col" />
 						<div class="help">
@@ -70,6 +70,26 @@
 						</div>
 						<input type="submit" value="Search Wiki-Data" />
 					</form>
+				</div>
+				<div id="tableinfo" class="grid12col">
+					<a href="#" class="left">prev</a>
+					<span class="left">There are 28 results, showing results 11 to 20 - <span>add a filter</span>?</span>
+					<a href="#">next</a>
+					<div id="columnPicker" class="right">
+						<button>Hide/Show Columns</button>
+						<div class="columns">
+							<span class="controls">
+								<label for="legal_name">Legal Name</label>
+								<input id="legal_name" type="checkbox" />
+							</span>
+							<span class="controls">
+								<label for="entity_type">Entity Type</label>
+								<input id="entity_type" type="checkbox" />
+							</span>
+						</div>
+					</div>
+					</p>
+					<br class="clear" />
 				</div>
 	            <div class="push"></div>
 			</div>

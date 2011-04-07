@@ -16,21 +16,19 @@
 				<h1 id="logo">Wiki-Data beta</h1>
 				<ul>
 					<li>
-						<h2><a href="#">Search</a></h2>
-						<span>for a record</span>
+						<a href="#">Search <span>for a record</span></a>
 					</li>
 					<li>
-						<h2><a href="#">About</a></h2>
-						<span>Wiki-Data</span>
+						<a href="#">About <span>Wiki-Data</span></a>
 					</li>
 					<li>
-						<h2><a href="#">Self-certification</a></h2>
+						<a href="#">Self-certification</a>
 					</li>
 					<li>
-						<h2><a href="#">API</a></h2>
+						<a href="#">API</a>
 					</li>
 					<li>
-						<h2><a href="#">Login</a></h2>
+						<a href="#">Login</a>
 					</li>
 				</ul>
 				<p class="right"><img src="images/avox_logo" alt="Avox website" /></p>
@@ -49,8 +47,24 @@
 				</div>
 			</div>
 			<div class="jbasewrap">
-				<p>My content</p>
-				<h1>MACHINE here</h1>
+				<div class="grid12col">
+					<div class="grid4col marginright">
+						<h2>Your Search Results</h2>
+						<p>Use the form on the right to refine your results further or make a new search.</p>
+					</div>
+					<div id="searchBox" class="grid8col">
+						<label for="query" class="grid3col marginright">Company Name / AVID</label>
+						<input id="query" type="text" class="grid3col" />
+						<div class="help">
+							<p>Type here to search by AVID, Legal Name, Previous Name(s) and Trades As Name(s)</p>
+						</div>
+						<label for="branches">Include branches</label>
+						<input id="branches" type="checkbox" checked="checked" />
+						<div class="help">
+							<p>Check this box to include company branches in your search.</p>
+						</div>
+					</div>
+				</div>
 	            <div class="push"></div>
 			</div>
 		</div>

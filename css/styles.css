@@ -483,13 +483,34 @@ table#resultsTable thead tr {
 	background-color: #3c3c3c;
 	color: white;
 }
-table#resultsTable thead tr th, table#resultsTable tr td {
+
+table#resultsTable thead tr th {
+	background-image: url(../images/table-header-arrow.gif);
+	background-repeat: no-repeat;
+	background-position: 6px 5px;
+	padding: 5px 5px 5px 15px;
+}
+
+table#resultsTable thead tr th.ascending {
+	background-image: url(../images/table-header-arrow-up.gif);
+}
+
+table#resultsTable thead tr th.descending {
+	background-image: url(../images/table-header-arrow-down.gif);
+}
+
+table#resultsTable thead tr th.noOrder {
+	background-image:none;
+}
+
+table#resultsTable tr td {
 	padding: 5px;
 }	
 
 table#resultsTable tr td.entityName {
 	font-size: 1.1em;
 	line-height: 1.3em;
+	width: 140px
 }
 
 table#resultsTable tr.even {

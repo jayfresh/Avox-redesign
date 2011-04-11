@@ -29,7 +29,6 @@ input[type=checkbox], input[type=submit] {
 }
 
 .container {
-	overflow: hidden;
 	position: relative;
 }
 
@@ -37,7 +36,22 @@ input[type=checkbox], input[type=submit] {
 	margin: 0;
 }
 
+a {
+	text-decoration: none;
+	color: #2956A7;
+}
+
+a:hover {
+	border-bottom: 1px dotted silver;
+	color: #8facff;
+}
+
+
 /*=================================== Header Bar */
+
+#header a {
+	border-bottom: none;
+}
 
 #header {
 	height: 60px;	
@@ -146,25 +160,103 @@ input[type=checkbox], input[type=submit] {
 
 #content {
 	margin-top: 30px;
+	background-color: white;
 }
 
 .js .help {
-	width: 18px;
-	height: 18px;
-	background-color: black;
+	width: 14px;
+	height: 14px;
+	background-color: #fff8e6;
+	border: 1px solid #d5d5d5;	
+	-moz-border-radius: 2px; 
+	-webkit-border-radius: 2px; 
+	border-radius: 2px; 	
+	-moz-box-shadow: 1px 1px 2px #ccc; 
+	-webkit-box-shadow: 1px 1px 2px #ccc; 
+	box-shadow: 1px 1px 2px #ccc; 
+	background-image: url(../images/qn.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
+.js .help:hover {
+	background-color: white;
+	cursor: pointer;
+}
+.js .help:hover p, 
+.js #searchBox .help:hover span.heading, 
+.js .help:hover span.heading {
+	visibility: visible;
+}
 .js .help p {
-	display: none;
+	visibility: hidden;
+	position: absolute;
+	margin-left: 23px;
+	background-color: #ebf1ff;
+	width: 118px;
+	padding: 25px 10px 10px;
+	border: 1px solid #ccc;
+	z-index: 12;
+	font-size: 0.75em;
+	line-height: 1.4em;
+	text-align: left;
+	
+	-moz-box-shadow: 1px 1px 3px #333; 
+	-webkit-box-shadow: 1px 1px 3px #333; 
+	box-shadow: 1px 1px 3px #333; 
+	
+	border-bottom-right-radius:3px;
+	-moz-border-radius-bottomright:3px;
+	-webkit-border-bottom-right-radius:3px;
+	border-bottom-left-radius:3px;
+	-moz-border-radius-bottomleft:3px;
+	-webkit-border-bottom-left-radius:3px;
+}
+
+.js #searchBox .help span.heading, .js .help span.heading {
+	visibility: hidden; 
+	background: #767676;
+	color: white;
+	text-align: left;
+	z-index: 13;
+	position: absolute;
+	width: 136px;
+	height: 20px; 
+	padding: 0px 10px 0px 0px;
+	font-size: 0.8em;
+	margin: -2px 0px 0px 22px;
+	text-shadow: 1px 1px 1px #333333;
+	filter: dropshadow(color=#333333, offx=1, offy=1);
+	-moz-border-radius-topright: 3px;
+	-moz-border-radius-topleft: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	-moz-border-radius-bottomright: 3px;
+	border-top-right-radius: 3px;
+	border-top-right-left: 0px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 3px;
+	
+	-moz-box-shadow: 1px 1px 1px #333; 
+	-webkit-box-shadow: 1px 1px 1px #333; 
+	box-shadow: 1px 1px 1px #333; 
+}
+
+.js #searchBox .help span.heading span, .js .help span.heading span {
+	width: 0;
+	position: relative;
+	left: -10px;
+	font-size: 0px; line-height: 0%;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-right: 10px solid #767676;
 }
 
 /*=================================== Search box */
 
 #searchBox {
 	padding: 10px 0;
-	position: absolute;
-	bottom: 0;
-	right: 0;
+	float: right;
+	margin-top: 44px;
 }
 
 #searchBox div.help {
@@ -181,8 +273,8 @@ input[type=checkbox], input[type=submit] {
 }
 
 #searchBox #query, #searchBox #branches {
-	margin-bottom: 10px;
 	border: 1px solid #D5D5D5;
+    margin: 3px 0 10px 5px;
 }
 
 #searchBox label.small {
@@ -206,14 +298,14 @@ input[type=checkbox], input[type=submit] {
 }
 
 #searchBox button:hover {
-	background-color: #191919;
+	background-color: #3c3c3c;
 }
 
 #submitButton {
 	background-color: #FF6E42;
 	color: #FFF;
-	text-shadow: 1px 1px 1px #000000;
-	filter: dropshadow(color=#000000, offx=1, offy=1);
+	text-shadow: 1px 1px 1px #333333;
+	filter: dropshadow(color=#333333, offx=1, offy=1);
 	border: none;
 	margin-left: 12px;
 	height: 20px;
@@ -239,8 +331,180 @@ input[type=checkbox], input[type=submit] {
 /*=================================== Table */
 
 .tableinfo {
-	margin-top: 25px;
+	font-size: 0.8em;
+	margin: 10px 0px;
 }
+.tableinfo.top {
+	padding-top: 30px;
+	clear: both;
+}
+.tableinfo a.left, 
+.tableinfo a.right, 
+#resultsTable a.pointed {
+	background-color: #767676;
+	color: white;
+	padding: 0px 10px;
+	height: 16px;
+	line-height: 1.2em;
+	width: 40px;
+}
+
+.tableinfo a.left:hover, 
+.tableinfo a.right:hover, 
+#resultsTable a.pointed:hover {
+	background-color: #3c3c3c;
+	border-bottom: none;
+}
+
+.tableinfo a.right:hover span, 
+#resultsTable a.pointed:hover span {
+	border-left-color: #3c3c3c;
+}
+
+.tableinfo a.left:hover span {
+	border-right-color: #3c3c3c;
+}
+
+.tableinfo a.left {
+	padding-left: 0px;
+	margin-right: 20px;
+	text-align: right;
+	-moz-border-radius-topright: 3px;
+	-moz-border-radius-topleft: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	-moz-border-radius-bottomright: 3px;
+	border-top-right-radius: 3px;
+	border-top-right-left: 0px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 3px;
+}
+
+.tableinfo a.right, 
+#resultsTable a.pointed {
+	padding-right: 0px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 0px;
+	-moz-border-radius-bottomright: 0px;
+	-moz-border-radius-bottomleft: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 3px;
+}
+
+.tableinfo a.right span, 
+#resultsTable a.pointed span {
+	width: 0;
+	font-size: 0px; line-height: 0%;
+	border-top: 8px solid #fff;
+	border-left: 8px solid #767676;
+	border-bottom: 8px solid #fff;
+	float: right;
+}
+
+#resultsTable .even a.pointed span {
+	border-top: 8px solid #f0f0f0;
+	border-bottom: 8px solid #f0f0f0;	
+}
+
+.tableinfo a.left span {
+	width: 0;
+	font-size: 0px; line-height: 0%;
+	border-top: 8px solid #fff;
+	border-bottom: 8px solid #fff;
+	border-right: 8px solid #767676;
+	float: left;
+}
+
+#columnPicker {
+	margin-right: 10px;
+}
+
+#columnPicker button {
+	background-color: #767676;	
+	-moz-border-radius: 3px; 
+	-webkit-border-radius: 3px; 
+	border-radius: 3px; 
+	height: 16px;
+	color: white;
+	border: none;
+	padding-bottom: 2px;
+	width: 140px;
+	
+	-moz-box-shadow: 1px 1px 3px #ccc; 
+	-webkit-box-shadow: 1px 1px 3px #ccc; 
+	box-shadow: 1px 1px 3px #ccc; 
+}
+
+#columnPicker button:hover {
+	background-color: #3c3c3c;
+}
+
+#columnPicker .columns {
+	visibility: hidden;
+	position: absolute;
+	background-color: #ebf1ff;
+	width: 118px;
+	padding: 10px;
+	text-align: right;
+	border: 1px solid #ccc;
+	z-index: 10;
+	
+	-moz-box-shadow: 1px 1px 3px #333; 
+	-webkit-box-shadow: 1px 1px 3px #333; 
+	box-shadow: 1px 1px 3px #333; 
+	
+	border-bottom-right-radius:3px;
+	-moz-border-radius-bottomright:3px;
+	-webkit-border-bottom-right-radius:3px;
+	border-bottom-left-radius:3px;
+	-moz-border-radius-bottomleft:3px;
+	-webkit-border-bottom-left-radius:3px;	
+}
+
+#columnPicker:hover .columns {
+	visibility: visible;
+}
+
+#columnPicker .columns span.controls {
+	display: block;
+}
+
+
+table#resultsTable {
+	font-size: 0.8em;
+	line-height: 1.2em;
+	width: 940px;
+	border-bottom: 1px solid #3c3c3c;
+	margin-bottom: 5px;
+}
+
+table#resultsTable thead tr {
+	background-color: #3c3c3c;
+	color: white;
+}
+table#resultsTable thead tr th, table#resultsTable tr td {
+	padding: 5px;
+}	
+
+table#resultsTable tr td.entityName {
+	font-size: 1.1em;
+	line-height: 1.3em;
+}
+
+table#resultsTable tr.even {
+	background-color: #f0f0f0;
+}
+
+#resultsTable a.pointed {
+	float: right;
+	width: 25px;
+	padding-left: 5px;
+	line-height: 1.3em;
+	position: relative;
+	top: 7px;
+}
+
 
 /*=================================== Footer Bar */
 

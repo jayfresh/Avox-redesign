@@ -10,6 +10,9 @@
 		<link rel="stylesheet" type="text/css" href="css/stepcarousel.css" type="text/css" media="screen" />
 		<link rel="stylesheet" type="text/css" href="css/styles.css" />
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu:light,lightitalic,regular,italic,500,500italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+		<script type="text/javascript">
+			document.documentElement.className = "js";
+		</script>
 	</head>
 	<body>
 		<div id="wrapper">
@@ -36,40 +39,41 @@
 				<p class="right marginright subnav"><a href="#">Partners</a> / <a href="#">Terms of Use</a></p>
 				<div id="fruitmachine">
 					<span>Currently searching through</span>
-					<span>
-						<img src="images/count2.png" alt="2" />
-						<img src="images/count6.png" alt="6" />
-						<img src="images/count6.png" alt="6" />
-						<img src="images/count2.png" alt="2" />
-						<img src="images/count6.png" alt="6" />
-						<img src="images/count2.png" alt="2" />
-					</span>
+					<img src="images/count3.png" alt="3" />
+					<img src="images/count6.png" alt="6" />
+					<img src="images/count9.png" alt="9" />
+					<img src="images/count7.png" alt="7" />
+					<img src="images/count6.png" alt="6" />
+					<img src="images/count3.png" alt="3" />
 					<span>Avox records</span>
 				</div>
 			</div>
-			<div class="jbasewrap">
-				<div class="grid12col">
-					<div class="grid4col marginright">
+			<div class="jbasewrap" id="content">
+				<div class="grid12col container">
+					<div class="grid4col marginright left">
 						<h2>Your Search Results</h2>
-						<p>Use the form on the right to refine your results further or make a new search.</p>
+						<p class="nomargin">Use the form on the right to refine your results further or make a new search.</p>
 					</div>
-					<form id="searchBox" class="grid8col" action="/search" method="POST">
+					<form id="searchBox" class="grid8col lightbg left" action="/search" method="POST">
 						<label for="query" class="grid3col marginright">Company Name / AVID</label>
 						<input id="query" type="text" class="grid3col" />
 						<div class="help">
 							<p>Type here to search by AVID, Legal Name, Previous Name(s) and Trades As Name(s)</p>
 						</div>
-						<label for="branches">Include branches</label>
+						<label for="branches" class="small grid1col">Include branches</label>
 						<input id="branches" type="checkbox" checked="checked" />
 						<div class="help">
 							<p>Check this box to include company branches in your search</p>
 						</div>
 						<span class="grid3col marginright">Add a Filter</span>
-						<button>+</button>
-						<div class="help">
-							<p>Click here to add extra rows to filter search results by, such as Entity Type and Operational Country</p>
-						</div>
-						<input type="submit" value="Search Wiki-Data" />
+						<span class="grid3col">
+							<button>+</button>
+							<div class="help">
+								<p>Click here to add extra rows to filter search results by, such as Entity Type and Operational Country</p>
+							</div>
+						</span>
+						<input type="submit" id="submitButton" value="Search Wiki-Data" />
+						<div id="testBorder"></div>
 					</form>
 				</div>
 				<div class="tableinfo grid12col">
@@ -108,21 +112,6 @@
 							<th title="Request more fields for this record">Request More Info</th>
 						</tr>
 					</thead>
-					<tfoot>
-						<tr>
-							<th><a href="javascript:;">hide</a></th>
-							<th><a href="javascript:;">hide</a></th>
-							<th><a href="javascript:;">hide</a></th>
-							<th><a href="javascript:;">hide</a></th>
-							<th><a href="javascript:;">hide</a></th>
-							<th><a href="javascript:;">hide</a></th>
-							<th><a href="javascript:;">hide</a></th>
-							<th><a href="javascript:;">hide</a></th>
-							<th><a href="javascript:;">hide</a></th>
-							<th><a href="javascript:;">hide</a></th>
-							<th><a href="javascript:;">hide</a></th>
-						</tr>
-					</tfoot>
 					<tbody>
 						<tr>
 							<td><a href="/bags/avox/tiddlers/7242417.html">7242417</a></td><!-- AVID -->

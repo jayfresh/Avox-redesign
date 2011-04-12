@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<title></title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -7,9 +7,9 @@
 		<link rel="stylesheet" type="text/css" href="css/j-base.css" />
 		<link rel="stylesheet" type="text/css" href="css/grid.css" />
 		<link rel="stylesheet" type="text/css" href="css/stickyfooter.css" />
-		<link rel="stylesheet" type="text/css" href="css/stepcarousel.css" type="text/css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/stepcarousel.css" media="screen" />
 		<link rel="stylesheet" type="text/css" href="css/styles.css" />
-		<link href='http://fonts.googleapis.com/css?family=Ubuntu:light,lightitalic,regular,italic,500,500italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu:light,lightitalic,regular,italic,500,500italic,bold,bolditalic' rel='stylesheet' type='text/css' />
 		<script type="text/javascript">
 			document.documentElement.className = "js";
 		</script>
@@ -54,28 +54,28 @@
 						<h2>Your Search Results</h2>
 						<p class="nomargin">Use the form on the right to refine your results further or make a new search.</p>
 					</div>
-					<form id="searchBox" class="grid8col lightbg left" action="/search" method="POST">
+					<form id="searchBox" class="grid8col lightbg left" action="/search" method="post">
 						<label for="query" class="grid3col marginright">Company Name / AVID</label>
 						<input id="query" type="text" class="grid3col" />
-						<div class="help">
+						<span class="help">
 							<span class="heading"><span></span>Search Terms</span>
-							<p>Type here to search by AVID, Legal Name, Previous Name(s) and Trades As Name(s)</p>
-						</div>
+							<span class="helpText">Type here to search by AVID, Legal Name, Previous Name(s) and Trades As Name(s)</span>
+						</span>
 						<label for="branches" class="small grid1col">Include branches</label>
 						<input id="branches" type="checkbox" checked="checked" />
-						<div class="help">
+						<span class="help">
 							<span class="heading"><span></span>Branches</span>
-							<p>Check this box to include company branches in your search</p>
-						</div>
+							<span class="helpText">Check this box to include company branches in your search</span>
+						</span>
 						<span class="grid3col marginright">Add a Filter</span>
 						<span class="grid3col">
 							<button>+</button>
-							<div class="help">
+							<span class="help">
 								<span class="heading"><span></span>Filters</span>
-								<p>Click here to add extra rows to filter search results by, such as Entity Type and Operational Country</p>
-							</div>
+								<span class="helpText">Click here to filter search results by different add fields, such as Entity Type and Operational Country</span>
+							</span>
 						</span>
-						<input type="submit" id="submitButton" value="Search Wiki-Data"><span id="testBorder"></span></input>
+						<input type="submit" id="submitButton" value="Search Wiki-Data" /><span id="testBorder"></span>
 					</form>
 				</div>
 				<div class="tableinfo top grid12col">
@@ -95,7 +95,6 @@
 							</span>
 						</div>
 					</div>
-					</p>
 					<br class="clear" />
 				</div>
 				<table id="resultsTable" class="draggable forget-ordering">

@@ -166,6 +166,7 @@ a:hover {
 .js .help {
 	width: 14px;
 	height: 14px;
+	display: block;
 	background-color: #fff8e6;
 	border: 1px solid #d5d5d5;	
 	-moz-border-radius: 2px; 
@@ -177,19 +178,24 @@ a:hover {
 	background-image: url(../images/qn.gif);
 	background-repeat: no-repeat;
 	background-position: center center;
+	margin: 2px 0px 0px 5px;
 }
+
 
 .js .help:hover {
 	background-color: white;
 	cursor: pointer;
 }
-.js .help:hover p, 
+.js .help:hover span.helpText, 
 .js #searchBox .help:hover span.heading, 
+.js #searchBox .help:hover span.helpText, 
 .js .help:hover span.heading {
 	visibility: visible;
 }
-.js .help p {
+.js #searchBox .help span.helpText, 
+.js .help span.helpText {
 	visibility: hidden;
+	display: block;
 	position: absolute;
 	margin-left: 23px;
 	background-color: #ebf1ff;

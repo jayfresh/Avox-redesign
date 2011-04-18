@@ -431,7 +431,7 @@ a:hover {
 	border-bottom: 10px solid #F0F0F0;
 }
 
-/*=================================== Table */
+/*=================================== Results Table */
 
 .tableinfo {
 	font-size: 0.8em;
@@ -629,6 +629,39 @@ table#resultsTable tr.even {
 	top: 7px;
 }
 
+/*=================================== Company Record Tables */
+
+table.companyRecord {
+	font-size: 0.85em;
+}
+
+table.companyRecord td {
+	border-bottom: 1px solid #d5d5d5;
+	color: #3c3c3c;
+	width: 170px;
+	padding: 5px 0px;
+}
+
+table.companyRecord {
+	/*border-top: 1px solid #d5d5d5;
+	border-bottom: 4px solid #d5d5d5; */
+}
+
+table.companyRecord td.field {
+	color: #767676;
+	width: 120px;
+	padding-right: 10px;
+}
+
+.pageContent.companyRecord h5 {
+	font-size: 1em;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+a.viewmap {
+	font-size: 0.8em;
+}
 
 /*=================================== Footer Bar */
 

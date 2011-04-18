@@ -404,6 +404,7 @@ a:hover {
 }
 
 #submitButton {
+	width: 120px;
 	background-color: #FF6E42;
 	color: #FFF;
 	text-shadow: 1px 1px 1px #333333;

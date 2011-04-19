@@ -635,8 +635,13 @@ table.companyRecord {
 	font-size: 0.85em;
 }
 
-table.companyRecord td {
+.companyRecord .borderbottom{
 	border-bottom: 1px solid #d5d5d5;
+	margin-bottom: 20px;
+}
+
+table.companyRecord td {
+	/* border-bottom: 1px solid #d5d5d5; */
 	color: #3c3c3c;
 	width: 170px;
 	padding: 5px 0px;

@@ -439,9 +439,33 @@ a:hover {
 	margin-right: 15px;
 }
 
-.advSearchLineField, .advSearchLineValue {
-	width: 220px; /* .grid3col */
-	margin-right: 20px; /* .marginright */
+#advancedSearchContainer {
+	width: 460px;
+}
+
+.advSearchLine {
+	position: relative;
+	width: 460px;
+	height: 30px;
+}
+
+.advSearchLineField {
+	position: absolute;
+	right: 220px;
+	width: 160px;
+	margin-right: 20px;
+	
+}
+
+.advSearchLineValue {
+	position: absolute;
+	right: -7px;
+	width: 190px;	
+}
+
+#advancedSearchContainer button {
+	position: absolute;
+	right: 198px;
 }
 
 /*=================================== Results Table */

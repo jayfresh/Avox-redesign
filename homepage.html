@@ -53,11 +53,21 @@
 			</div>
 			<div class="jbasewrap" id="content">
 				<div class="grid12col container">
-					<div class="grid4col marginright left">
-						<h2>Your Search Results</h2>
-						<p class="nomargin">Use the form on the right to refine your results further or make a new search.</p>
+					<div class="grid4col marginright left pageLinks notFixed">
+						<h2>Welcome to Wiki-Data</h2>
+						<p class="nomargin">An open, extensible, linkable repository of company information.</p>
+						<ul>
+							<li><a rel="self" href="#wikidata">Learn about Wiki-Data<span></span></a></li>
+							<li><a rel="self" href="#feedback">Read about the data API<span></span></a></li>
+							<li><a rel="self" href="#philosophy">Try a sample search<span></span></a></li>
+						</ul>
 					</div>
-					<form id="searchBox" class="grid8col lightbg left" action="/search" method="get">
+					<div class="grid8col right">
+						<h2>Find a Company Record</h2>
+						<p class="nomargin grid7col">Search our database of company information by company name or AVID. <br/>You can add filters to make your searches more accurate.</p>
+					</div>
+					
+					<form id="searchBox" class="homepage grid8col lightbg left" action="/search" method="get">
 						<label for="query" class="grid3col marginright">Company Name / AVID</label>
 						<input value="avox" id="query" name="q" class="grid3col" type="text">
 						<span class="help">
@@ -104,182 +114,7 @@
 						<!-- TO-DO: check that this looks correct -->
 					</form>
 				</div>
-				<div class="tableinfo top grid12col">
-					<a href="#" class="left"><span></span>prev</a>
-					<span class="left">There are 28 results, showing results 11 to 20 - <a href="#">add a filter</a>?</span>
-					<a href="#" class="right"><span></span>next</a>
-					<div id="columnPicker" class="right">
-						<button>Hide/Show Columns</button>
-						<div class="columns">
-							<span class="controls">
-								<label for="avid">AVID</label>
-								<input checked="checked" id="avid" type="checkbox">
-							</span>
-							
-							<span class="controls">
-								<label for="legal_name">Legal Name</label>
-								<input checked="checked" id="legal_name" type="checkbox">
-							</span>
-							
-							<span class="controls">
-								<label for="previous_name_s_">Previous Name(s)</label>
-								<input id="previous_name_s_" type="checkbox">
-							</span>
-							
-							<span class="controls">
-								<label for="trades_as_name_s_">Trades As Name(s)</label>
-								<input id="trades_as_name_s_" type="checkbox">
-							</span>
-							
-							<span class="controls">
-								<label for="trading_status">Trading Status</label>
-								<input checked="checked" id="trading_status" type="checkbox">
-							</span>
-							
-							<span class="controls">
-								<label for="company_website">Company Website</label>
-								<input id="company_website" type="checkbox">
-							</span>
-							
-							<span class="controls">
-								<label for="operational_po_box">Operational PO Box</label>
-								<input id="operational_po_box" type="checkbox">
-							</span>
-							
-							<span class="controls">
-								<label for="operational_floor">Operational Floor</label>
-								<input id="operational_floor" type="checkbox">
-							</span>
-							
-							<span class="controls">
-								<label for="operational_building">Operational Building</label>
-								<input id="operational_building" type="checkbox">
-							</span>
-							
-							<span class="controls">
-								<label for="operational_street_1">Operational Street 1</label>
-								<input checked="checked" id="operational_street_1" type="checkbox">
-							</span>
-							
-							<span class="controls">
-								<label for="operational_street_2">Operational Street 2</label>
-								<input id="operational_street_2" type="checkbox">
-							</span>
-							
-							<span class="controls">
-								<label for="operational_street_3">Operational Street 3</label>
-								<input id="operational_street_3" type="checkbox">
-							</span>
-							
-							<span class="controls">
-								<label for="operational_city">Operational City</label>
-								<input checked="checked" id="operational_city" type="checkbox">
-							</span>
-							
-							<span class="controls">
-								<label for="operational_state">Operational State</label>
-								<input checked="checked" id="operational_state" type="checkbox">
-							</span>
-							
-							<span class="controls">
-								<label for="operational_country">Operational Country</label>
-								<input checked="checked" id="operational_country" type="checkbox">
-							</span>
-							
-							<span class="controls">
-								<label for="operational_postcode">Operational Postcode</label>
-								<input checked="checked" id="operational_postcode" type="checkbox">
-							</span>
-							
-							<span class="controls">
-								<label for="registered_country">Registered Country</label>
-								<input checked="checked" id="registered_country" type="checkbox">
-							</span>
-							
-							<span class="controls">
-								<label for="entity_type">Entity Type</label>
-								<input id="entity_type" type="checkbox">
-							</span>
-							</span>
-						</div>
-					</div>
-					<br class="clear" />
-				</div>
-				<table id="resultsTable" class="draggable forget-ordering">
-					<thead>
-						<tr>
-							<th class="descending" title="AVID">AVID</th>
-							<th class="ascending" title="Legal Name">Legal Name</th>
-							<th title="Trading Status">Trading Status</th>
-							<th title="Operational Street">Operational Street</th>
-							<th title="Operational City">Operational City</th>
-							<th title="Operational State">Operational State</th>
-							<th title="Operational Country">Operational Country</th>
-							<th title="Country of Incorporation">Country of Incorporation</th>
-							<th title="Entity Type">Entity Type</th>
-							<th class="noOrder" title="Challenge this record">Challenge</th>
-							<th class="noOrder" title="Request more fields for this record">Request More Info</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td><a href="/bags/avox/tiddlers/7242417.html">7242417</a></td><!-- AVID -->
-							<td class="entityName"><a href="/bags/avox/tiddlers/7242417.html">CWT Commodities Warehousing Pte. Ltd</a></td>
-							<td>Active</td>
-							<td>1 Tuas Avenue 3</td>
-							<td>Singapore</td>
-							<td>-</td>
-							<td>Singapore</td>
-							<td>Singapore</td>
-							<td>Subsidiary</td>
-							<td><a class="pointed" href="/bags/avox/tiddlers/7242417.challenge"><span></span>Go</a></td>
-							<td><a class="pointed" href="/bags/avox/tiddlers/7242417.request"><span></span>Go</a></td>
-						</tr>
-						<tr class="even">
-							<td><a href="/bags/avox/tiddlers/7242417.html">7242417</a></td><!-- AVID -->
-							<td class="entityName"><a href="/bags/avox/tiddlers/7242417.html">CWT Commodities Warehousing Pte. Ltd</a></td>
-							<td>Active</td>
-							<td>1 Tuas Avenue 3</td>
-							<td>Singapore</td>
-							<td>-</td>
-							<td>Singapore</td>
-							<td>Singapore</td>
-							<td>Subsidiary</td>
-							<td><a class="pointed" href="/bags/avox/tiddlers/7242417.challenge"><span></span>Go</a></td>
-							<td><a class="pointed" href="/bags/avox/tiddlers/7242417.request"><span></span>Go</a></td>
-						</tr>
-						<tr>
-							<td><a href="/bags/avox/tiddlers/7242417.html">7242417</a></td><!-- AVID -->
-							<td class="entityName"><a href="/bags/avox/tiddlers/7242417.html">CWT Commodities Warehousing Pte. Ltd</a></td>
-							<td>Active</td>
-							<td>1 Tuas Avenue 3</td>
-							<td>Singapore</td>
-							<td>-</td>
-							<td>Singapore</td>
-							<td>Singapore</td>
-							<td>Subsidiary</td>
-							<td><a class="pointed" href="/bags/avox/tiddlers/7242417.challenge"><span></span>Go</a></td>
-							<td><a class="pointed" href="/bags/avox/tiddlers/7242417.request"><span></span>Go</a></td>
-						</tr>
-						<tr class="even">
-							<td><a href="/bags/avox/tiddlers/7242417.html">7242417</a></td><!-- AVID -->
-							<td class="entityName"><a href="/bags/avox/tiddlers/7242417.html">CWT Commodities Warehousing Pte. Ltd</a></td>
-							<td>Active</td>
-							<td>1 Tuas Avenue 3</td>
-							<td>Singapore</td>
-							<td>-</td>
-							<td>Singapore</td>
-							<td>Singapore</td>
-							<td>Subsidiary</td>
-							<td><a class="pointed" href="/bags/avox/tiddlers/7242417.challenge"><span></span>Go</a></td>
-							<td><a class="pointed" href="/bags/avox/tiddlers/7242417.request"><span></span>Go</a></td>
-						</tr>
-					</tbody>
-				</table>
-				<div class="tableinfo grid12col">
-					<a href="#" class="left"><span></span>prev</a>
-					<a href="#" class="right"><span></span>next</a>
-				</div>
+				
 				<br class="clearboth" />
 	            <div class="push"></div>
 			</div>	<!-- CLOSE "JBASEWRAP" -->

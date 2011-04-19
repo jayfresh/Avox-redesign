@@ -365,6 +365,11 @@ a:hover {
 	margin-top: 44px;
 }
 
+#searchBox.homepage {
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
 #searchBox div.help {
 	margin-left: 10px;
 }

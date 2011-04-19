@@ -57,28 +57,34 @@
 						<h2>Your Search Results</h2>
 						<p class="nomargin">Use the form on the right to refine your results further or make a new search.</p>
 					</div>
-					<form id="searchBox" class="grid8col lightbg left" action="/search" method="post">
+					<form id="searchBox" class="grid8col lightbg left" action="/search" method="get">
 						<label for="query" class="grid3col marginright">Company Name / AVID</label>
-						<input id="query" type="text" class="grid3col" />
+						<input value="avox" id="query" name="q" class="grid3col" type="text">
 						<span class="help">
 							<span class="heading"><span></span>Search Terms</span>
 							<span class="helpText">Type here to search by AVID, Legal Name, Previous Name(s) and Trades As Name(s)</span>
 						</span>
 						<label for="branches" class="small grid1col">Include branches</label>
-						<input id="branches" type="checkbox" checked="checked" />
+						<input id="branches" name="branches" checked="checked" type="checkbox">
 						<span class="help">
 							<span class="heading"><span></span>Branches</span>
 							<span class="helpText">Check this box to include company branches in your search</span>
 						</span>
-						<span class="grid3col marginright">Add a Filter</span>
-						<span class="grid3col">
-							<button>+</button>
-							<span class="help">
-								<span class="heading"><span></span>Filters</span>
-								<span class="helpText">Click here to filter search results by different add fields, such as Entity Type and Operational Country</span>
+						<span id="testBorder"></span><input id="submitButton" value="Search Wiki-Data" type="submit">
+						<div style="visibility: visible;" class="onlyjs">
+							<span class="grid3col marginright">Add a Filter</span>
+							<span class="grid3col">
+								<button>+</button>
+								<span class="help">
+									<span class="heading"><span></span>Filters</span>
+									<span class="helpText">Click here to filter search results by different add fields, such as Entity Type and Operational Country</span>
+								</span>
 							</span>
-						</span>
-						<input type="submit" id="submitButton" value="Search Wiki-Data" /><span id="testBorder"></span>
+						</div>
+						<!-- TO-DO: check that this looks correct -->
+						<div id="advancedSearchContainer">
+							<div id="advancedSearchLines"></div>
+						<div class="advSearchLine"><select class="advSearchLineField" name="adv_0_field"><option selected="selected">AVID</option><option>Legal Name</option><option>Previous Name(s)</option><option>Trades As Name(s)</option><option>Trading Status</option><option>Company Website</option><option>Operational PO Box</option><option>Operational Floor</option><option>Operational Building</option><option>Operational Street 1</option><option>Operational Street 2</option><option>Operational Street 3</option><option>Operational City</option><option>Operational State</option><option>Operational Country</option><option>Operational Postcode</option><option>Registered Country</option><option>Entity Type</option></select><input class="advSearchLineValue" size="35" name="adv_0_value" type="text"><button>-</button></div></div>
 					</form>
 				</div>
 				<div class="tableinfo top grid12col">
@@ -89,12 +95,94 @@
 						<button>Hide/Show Columns</button>
 						<div class="columns">
 							<span class="controls">
-								<label for="legal_name">Legal Name</label>
-								<input id="legal_name" type="checkbox" />
+								<label for="avid">AVID</label>
+								<input checked="checked" id="avid" type="checkbox">
 							</span>
+							
+							<span class="controls">
+								<label for="legal_name">Legal Name</label>
+								<input checked="checked" id="legal_name" type="checkbox">
+							</span>
+							
+							<span class="controls">
+								<label for="previous_name_s_">Previous Name(s)</label>
+								<input id="previous_name_s_" type="checkbox">
+							</span>
+							
+							<span class="controls">
+								<label for="trades_as_name_s_">Trades As Name(s)</label>
+								<input id="trades_as_name_s_" type="checkbox">
+							</span>
+							
+							<span class="controls">
+								<label for="trading_status">Trading Status</label>
+								<input checked="checked" id="trading_status" type="checkbox">
+							</span>
+							
+							<span class="controls">
+								<label for="company_website">Company Website</label>
+								<input id="company_website" type="checkbox">
+							</span>
+							
+							<span class="controls">
+								<label for="operational_po_box">Operational PO Box</label>
+								<input id="operational_po_box" type="checkbox">
+							</span>
+							
+							<span class="controls">
+								<label for="operational_floor">Operational Floor</label>
+								<input id="operational_floor" type="checkbox">
+							</span>
+							
+							<span class="controls">
+								<label for="operational_building">Operational Building</label>
+								<input id="operational_building" type="checkbox">
+							</span>
+							
+							<span class="controls">
+								<label for="operational_street_1">Operational Street 1</label>
+								<input checked="checked" id="operational_street_1" type="checkbox">
+							</span>
+							
+							<span class="controls">
+								<label for="operational_street_2">Operational Street 2</label>
+								<input id="operational_street_2" type="checkbox">
+							</span>
+							
+							<span class="controls">
+								<label for="operational_street_3">Operational Street 3</label>
+								<input id="operational_street_3" type="checkbox">
+							</span>
+							
+							<span class="controls">
+								<label for="operational_city">Operational City</label>
+								<input checked="checked" id="operational_city" type="checkbox">
+							</span>
+							
+							<span class="controls">
+								<label for="operational_state">Operational State</label>
+								<input checked="checked" id="operational_state" type="checkbox">
+							</span>
+							
+							<span class="controls">
+								<label for="operational_country">Operational Country</label>
+								<input checked="checked" id="operational_country" type="checkbox">
+							</span>
+							
+							<span class="controls">
+								<label for="operational_postcode">Operational Postcode</label>
+								<input checked="checked" id="operational_postcode" type="checkbox">
+							</span>
+							
+							<span class="controls">
+								<label for="registered_country">Registered Country</label>
+								<input checked="checked" id="registered_country" type="checkbox">
+							</span>
+							
 							<span class="controls">
 								<label for="entity_type">Entity Type</label>
-								<input id="entity_type" type="checkbox" />
+								<input id="entity_type" type="checkbox">
+							</span>
 							</span>
 						</div>
 					</div>

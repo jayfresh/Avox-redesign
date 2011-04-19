@@ -266,6 +266,10 @@ a:hover {
 	padding-bottom: 20px;
 }
 
+.pageLinks.notFixed {
+	position: static;
+}
+
 .pageLinks ul, .pageLinks ul li {
 	list-style: none;
 	margin: 0px;

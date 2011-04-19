@@ -383,7 +383,7 @@ a:hover {
 	float: left;
 }
 
-#searchBox #query, #searchBox #branches, #advancedSearchContainer input {
+#searchBox #query, #searchBox #branches, #advancedSearchContainer input, {
 	border: 1px solid #D5D5D5;
     margin: 3px 0 10px 5px;
 }
@@ -475,7 +475,45 @@ a:hover {
 	position: absolute;
 	right: 198px;
 }
+/*=================================== Register an Entity Forms */
 
+.formSet {
+	padding: 10px;
+	font-size: 0.8em;
+
+}
+
+.formSet input, .formSet select {
+	border: 1px solid #D5D5D5;
+	padding: 3px;
+	width: 240px;
+	margin-bottom: 10px;
+}
+
+.formSet select {
+	width: 247px;
+}
+
+.formSet label {
+	display: block;
+}
+
+.formSet .help {
+	font-size: 1.2em;
+	float: right;
+}
+
+.formSet.grid8col {
+	width: 600px;
+}
+
+.formSet.grid4col {
+	width: 280px;
+}
+
+.formSet.grid8col .grid4col {
+	width: 280px;
+}
 /*=================================== Results Table */
 
 .tableinfo {

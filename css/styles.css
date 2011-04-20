@@ -755,7 +755,7 @@ table.companyRecord {
 	font-size: 0.85em;
 }
 
-.companyRecord .borderbottom{
+.companyRecord .borderbottom, .requestInformation .borderbottom {
 	border-bottom: 1px solid #d5d5d5;
 	margin-bottom: 20px;
 }
@@ -781,7 +781,7 @@ table.companyRecord td.field {
     width: 120px;
 }
 
-.pageContent.companyRecord h5 {
+.pageContent.companyRecord h5, .pageContent.requestInformation h5 {
 	font-size: 1em;
 	font-weight: bold;
 	margin-bottom: 5px;
@@ -805,6 +805,14 @@ table.companyRecord tr.current {
 table.companyRecord tr.current td.field {
 	padding-left: 5px;
 }
+
+/*=================================== Request Info Pages */
+
+.pageContent.requestInformation ul {
+	font-size: 0.8em;
+}
+
+
 
 /*=================================== Footer Bar */
 

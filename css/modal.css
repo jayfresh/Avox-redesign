@@ -1,5 +1,5 @@
 .overlay-decorator {
-	  background:#024;
+	  background:#000;
 		height:100%;
 	  width:100%;
 	  position:absolute;
@@ -7,7 +7,7 @@
 		left:0;
 	  opacity:0.8;
 		z-index:2000;
-		*display:none;
+		/*display:none; */
 	}
 	.overlay-wrap {
 		height:100%;
@@ -73,8 +73,52 @@
 		padding:0;
 	}
 	#modal {
-		display:none;
+		/*display:none; */
 	}
 	.modal #modal {
 		display:block;
 	}
+
+
+#personal_info {
+	background-color: #EEE;
+	padding: 10px;
+	color: #565656;
+	font-size: 1.2em;
+}
+
+#personal_info h2 {
+	text-transform: capitalize;
+	margin-top: 0px;
+	border-bottom: 10px solid #d5d5d5;
+}
+
+#personal_info input, #personal_info select {
+	border: 1px solid #999;
+	padding: 2px;
+	margin: 5px 0px 10px;
+	display: block;
+	width: 160px;
+}
+
+#personal_info label {
+	float: left;
+	width: 150px;
+}
+
+#personal_info button, #personal_info #challenge {
+	background-color: #3c3c3c;
+	color: white;
+	border: none;
+	-moz-border-radius: 4px; 
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	padding: 3px;
+	width: auto;
+	font-family: "Ubuntu", Arial;
+	margin: 0px 0px;
+	letter-spacing: 0.05em;
+}
+#personal_info button:hover, #personal_info #challenge:hover {
+	background-color: #191919;
+}

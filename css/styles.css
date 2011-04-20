@@ -114,6 +114,11 @@ a:hover {
     margin: 0;
     padding: 15px 20px 0;
     text-transform: uppercase;
+    text-indent: -9999px;
+    background-image: url(../images/avoxlogotype-blue.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 150px;
 }
 
 #header .subnav {

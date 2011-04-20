@@ -388,7 +388,7 @@ a:hover {
 	float: left;
 }
 
-#searchBox #query, #searchBox #branches, #advancedSearchContainer input {
+#searchBox #query, #searchBox #branches, #searchBox #advancedSearchContainer input {
 	border: 1px solid #D5D5D5;
     margin: 3px 0 10px 5px;
 }
@@ -417,7 +417,7 @@ a:hover {
 	background-color: #3c3c3c;
 }
 
-#searchBox #submitButton, #submitButton {
+#submitButton {
 	width: 120px;
 	background-color: #FF6E42;
 	color: #FFF;
@@ -452,19 +452,19 @@ a:hover {
 	margin-top: 15px;
 }
 
-#advancedSearchContainer {
+#searchBox #advancedSearchContainer {
 	width: 460px;
 	margin: 10px 0px 5px;
 }
 
-.advSearchLine {
+#searchBox .advSearchLine {
 	position: relative;
 	width: 460px;
 	height: 29px;
 	margin-top: 6px;
 }
 
-.advSearchLineField {
+#searchBox .advSearchLineField {
 	position: absolute;
 	right: 220px;
 	width: 160px;
@@ -472,14 +472,14 @@ a:hover {
 	
 }
 
-.advSearchLineValue {
+#searchBox .advSearchLineValue {
 	position: absolute;
 	right: -7px;
 	top: -3px;
 	width: 190px;	
 }
 
-#advancedSearchContainer button {
+#searchBox #advancedSearchContainer button {
 	position: absolute;
 	right: 198px;
 }
@@ -529,6 +529,19 @@ a:hover {
 .formSet.grid8col .grid4col {
 	width: 280px;
 }
+
+#personal_info {
+	display: none;
+}
+
+.modal #personal_info {
+	display: block;
+}
+
+.js #toOverflow, #tableoverflow {
+	visibility: hidden;
+}
+
 /*=================================== Results Table */
 
 .tableinfo {
@@ -615,6 +628,10 @@ a:hover {
 	border-bottom: 8px solid #fff;
 	border-right: 8px solid #767676;
 	float: left;
+}
+
+#pageDistance {
+	display: none;
 }
 
 #columnPicker {

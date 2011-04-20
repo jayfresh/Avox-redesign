@@ -452,6 +452,11 @@ a:hover {
 	margin-top: 15px;
 }
 
+#recordForm #testBorder {
+	border-bottom-color: #FFF;
+	border-top-color: #FFF;
+}
+
 #searchBox #advancedSearchContainer {
 	width: 460px;
 	margin: 10px 0px 5px;
@@ -511,6 +516,12 @@ a:hover {
 
 .formSet label {
 	display: block;
+}
+
+.formSet textarea { /* used on the challenge page */
+	width: 98%;
+	border: 1px solid #D5D5D5;
+	padding: 2px;
 }
 
 .formSet .help {

@@ -106,7 +106,7 @@ a:hover {
 }
 
 #header h1 {
-	background-color: #2956A7;
+	background-color: /* #2956A7 */ #3c3c3c;
     color: white;
     float: left;
     font-size: 1.6em;
@@ -115,7 +115,7 @@ a:hover {
     padding: 15px 20px 0;
     text-transform: uppercase;
     text-indent: -9999px;
-    background-image: url(../images/avoxlogotype-blue.png);
+    background-image: url(../images/avoxlogotype-grey.png);
     background-repeat: no-repeat;
     background-position: center center;
     width: 150px;
@@ -757,8 +757,11 @@ table.companyRecord {
 
 table.companyRecord td.field {
 	color: #767676;
-	width: 120px;
-	padding-right: 10px;
+    font-size: 0.8em;
+    letter-spacing: 0.03em;
+    padding-right: 10px;
+    text-transform: uppercase;
+    width: 120px;
 }
 
 .pageContent.companyRecord h5 {
@@ -768,7 +771,22 @@ table.companyRecord td.field {
 }
 
 a.viewmap {
-	font-size: 0.8em;
+	text-transform: none;
+
+}
+
+table.companyRecord input {
+	border: 1px solid #D5D5D5;
+	padding: 2px;
+	width: 164px;
+
+}
+
+table.companyRecord tr.current {
+	background-color: #d5d5d5;
+}
+table.companyRecord tr.current td.field {
+	padding-left: 5px;
 }
 
 /*=================================== Footer Bar */

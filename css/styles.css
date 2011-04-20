@@ -412,7 +412,7 @@ a:hover {
 	background-color: #3c3c3c;
 }
 
-#submitButton {
+#searchBox #submitButton, #submitButton {
 	width: 120px;
 	background-color: #FF6E42;
 	color: #FFF;
@@ -431,6 +431,8 @@ a:hover {
 	border-bottom-right-radius: 0px;
 	border-bottom-left-radius: 3px;
 	float: right;
+	border: none;
+	margin-top: 15px;
 }
 
 #testBorder {
@@ -442,11 +444,12 @@ a:hover {
 	float: right;
 	clear: both;
 	margin-right: 15px;
+	margin-top: 15px;
 }
 
 #advancedSearchContainer {
 	width: 460px;
-	margin-bottom: 5px;
+	margin: 10px 0px 5px;
 }
 
 .advSearchLine {
@@ -475,6 +478,13 @@ a:hover {
 	position: absolute;
 	right: 198px;
 }
+
+#searchBox input, #searchBox select {
+	border: 1px solid #D5D5D5;
+	padding: 3px;
+}
+
+
 /*=================================== Register an Entity Forms */
 
 .formSet {

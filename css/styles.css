@@ -25,7 +25,7 @@ input[type=checkbox], input[type=submit] {
 }
 
 .lightbg {
-	background-color: #F0F0F0;
+	background-color: #e0e0e0;
 }
 
 .container {
@@ -370,6 +370,9 @@ a:hover {
 	margin-top: 44px;
 	width: 600px;
 	position: relative;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
 }
 
 #searchBox input#query{
@@ -463,9 +466,9 @@ a:hover {
 }
 
 #testBorder {
-	border-bottom: 10px solid #F0F0F0;
+	border-bottom: 10px solid #e0e0e0;
     border-left: 10px solid #FF6E42;
-    border-top: 10px solid #F0F0F0;
+    border-top: 10px solid #e0e0e0;
     font-size: 0;
     line-height: 0;
     margin-right: 0;
@@ -655,8 +658,8 @@ a:hover {
 }
 
 #resultsTable .even a.pointed span {
-	border-top: 8px solid #f0f0f0;
-	border-bottom: 8px solid #f0f0f0;	
+	border-top: 8px solid #e0e0e0;
+	border-bottom: 8px solid #e0e0e0;	
 }
 
 .tableinfo a.left span {
@@ -775,7 +778,7 @@ table#resultsTable tr td.entityName {
 }
 
 table#resultsTable tr.even {
-	background-color: #f0f0f0;
+	background-color: #e0e0e0;
 }
 
 #resultsTable a.pointed {
@@ -787,10 +790,28 @@ table#resultsTable tr.even {
 	top: 7px;
 }
 
+/*=================================== Default Tables */
+
+table tr td, table tr th {
+	padding: 3px 15px 3px 5px;
+}	
+
+table {
+	border: 1px solid #e0e0e0;
+	font-size: 0.85em;
+	width: 100%;
+}
+
+table thead tr {
+	background-color: #e0e0e0;
+}
+
+
 /*=================================== Company Record Tables */
 
 table.companyRecord {
 	font-size: 0.85em;
+	border: none;
 }
 
 .companyRecord .borderbottom, .requestInformation .borderbottom {

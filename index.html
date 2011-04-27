@@ -58,19 +58,27 @@
 						<p class="nomargin">Use the form on the right to refine your results further or make a new search.</p>
 					</div>
 					<form id="searchBox" class="grid8col lightbg left" action="/search" method="get">
-						<label for="query" class="grid3col marginright">Company Name / AVID</label>
-						<input value="avox" id="query" name="q" class="grid3col" type="text">
+						<label for="query" class="leftLabel marginright">Company Name / AVID</label>
+						<input value="avox" id="query" name="q" class="" type="text">
 						<span class="help">
 							<span class="heading"><span></span>Search Terms</span>
 							<span class="helpText">Type here to search by AVID, Legal Name, Previous Name(s) and Trades As Name(s)</span>
 						</span>
-						<label for="branches" class="small grid1col">Include branches</label>
+						<label for="branches" class="small marginleft">Include branches</label>
 						<input id="branches" name="branches" checked="checked" type="checkbox">
 						<span class="help">
 							<span class="heading"><span></span>Branches</span>
 							<span class="helpText">Check this box to include company branches in your search</span>
 						</span>
-						<span id="testBorder"></span><input id="submitButton" value="Search Wiki-Data" type="submit">
+						<div class="submitBox">
+							<select class="advSearchLineField match" name="match"><option selected="selected">Match All</option><option>Match Partial</option><option>Match Exact</option></select>
+							<span class="help">
+								<span class="heading"><span></span>Match</span>
+								<span class="helpText">Choose how to match results to your search strings</span>
+							</span>
+							<span id="testBorder"></span><input id="submitButton" value="Search Wiki-Data" type="submit">
+
+						</div>
 						<div id="advancedSearchContainer">
 							<div class="advSearchLine">
 								<select class="advSearchLineField" name="adv_0_field"><option selected="selected">AVID</option><option>Legal Name</option><option>Previous Name(s)</option><option>Trades As Name(s)</option><option>Trading Status</option><option>Company Website</option><option>Operational PO Box</option><option>Operational Floor</option><option>Operational Building</option><option>Operational Street 1</option><option>Operational Street 2</option><option>Operational Street 3</option><option>Operational City</option><option>Operational State</option><option>Operational Country</option><option>Operational Postcode</option><option>Registered Country</option><option>Entity Type</option>
@@ -91,9 +99,9 @@
 								<button>-</button>
 							</div>
 						</div>
-						<div style="visibility: visible;" class="onlyjs">
-							<span class="grid3col marginright">Add a Filter</span>
-							<span class="grid3col">
+						<div style="visibility: visible;" class="onlyjs clearboth">
+							<span class="leftLabel marginright">Add a Filter</span>
+							<span class="">
 								<button>+</button>
 								<span class="help">
 									<span class="heading"><span></span>Filters</span>

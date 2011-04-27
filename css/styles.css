@@ -391,7 +391,7 @@ a:hover {
 
 #searchBox #query, #searchBox #branches, #searchBox #advancedSearchContainer input {
 	border: 1px solid #D5D5D5;
-  /*  margin: 3px 0 10px 5px; */
+	margin: 3px 0 10px 5px;
 }
 
 #searchBox label.small {
@@ -402,7 +402,7 @@ a:hover {
 }
 
 #searchBox button {
-	border: 0;
+	border: none;
 	background-color: #797979;
 	color: #FFF;
 	-moz-border-radius: 3px;
@@ -436,7 +436,7 @@ a:hover {
 	border-bottom-right-radius: 0px;
 	border-bottom-left-radius: 3px;
 	float: right;
-	border: 0;
+	border: none;
 	margin-top: 15px;
 }
 

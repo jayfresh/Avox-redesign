@@ -184,6 +184,7 @@ a:hover {
 	background-repeat: no-repeat;
 	background-position: center center;
 	margin: 2px 0px 0px 5px;
+	position: relative;
 }
 
 
@@ -194,12 +195,15 @@ a:hover {
 .js .help:hover span.helpText, 
 .js #searchBox .help:hover span.heading, 
 .js #searchBox .help:hover span.helpText, 
-.js .help:hover span.heading {
+.js .help:hover span.heading,
+.help:hover span.heading span.text,
+.help:hover span.heading span.point
+ {
 	visibility: visible;
 }
 .js #searchBox .help span.helpText, 
 .js .help span.helpText {
-	visibility: hidden;
+	 visibility: hidden; 
 	display: block;
 	position: absolute;
 	margin-left: 23px;
@@ -208,8 +212,8 @@ a:hover {
 	padding: 25px 10px 10px;
 	border: 1px solid #ccc;
 	z-index: 12;
-	font-size: 0.75em;
-	line-height: 1.4em;
+	font-size: 10.2px;
+	line-height: 14px;
 	text-align: left;
 	
 	-moz-box-shadow: 1px 1px 3px #333; 
@@ -225,17 +229,30 @@ a:hover {
 }
 
 .js #searchBox .help span.heading, .js .help span.heading {
-	visibility: hidden; 
-	background: #767676;
+	 visibility: hidden;  
+	background: transparent;
+	
+}
+.help span.heading span.text,
+#searchBox .help span.heading span.text
+ {
+	background-color:#767676;
+	width:126px;
+	float:left;
+	display:block;
 	color: white;
+	display: block;
+	float: left;
 	text-align: left;
 	z-index: 13;
+	zoom: 1;
 	position: absolute;
-	width: 136px;
 	height: 20px; 
-	padding: 0px 10px 0px 0px;
-	font-size: 0.8em;
-	margin: -2px 0px 0px 22px;
+	padding: 0px 10px 0px 10px;
+	font-size: 11px;
+	left: 10px;
+	line-height: 19px;
+	margin: -2px 0px 0px 12px;
 	text-shadow: 1px 1px 1px #333333;
 	filter: dropshadow(color=#333333, offx=1, offy=1);
 	-moz-border-radius-topright: 3px;
@@ -252,11 +269,18 @@ a:hover {
 	box-shadow: 1px 1px 1px #333; 
 }
 
-.js #searchBox .help span.heading span, .js .help span.heading span {
-	width: 0;
+
+.js #searchBox .help span.heading span.point, .js .help span.heading span.point {
+	width: 0px;
+	display: block;
+	float: left;
 	position: relative;
-	left: -10px;
-	font-size: 0px; line-height: 0%;
+	line-height: 0px;
+	font-size: 0px;
+	left: 12px;
+	top: -2px;
+	line-height: 0px;
+	font-size: 0px;
 	border-top: 10px solid transparent;
 	border-bottom: 10px solid transparent;
 	border-right: 10px solid #767676;
@@ -395,7 +419,7 @@ a:hover {
 #searchBox label, #searchBox span {
 	text-align: right;
 	display: block;
-	font-size: 0.9em;
+	font-size: 0.89em;
 }
 
 #searchBox * {
@@ -408,6 +432,7 @@ a:hover {
 
 #branches {
 	margin: 2px 0px 0px 5px;
+	width: 15px;
 }
 
 #searchBox label.small {
@@ -455,7 +480,18 @@ a:hover {
 	position: absolute;
     right: 10px;
     top: 2px;
+}
 
+#recordForm #submitButton {
+	position: relative;
+	float: right;
+	margin-right: -10px;
+	margin-top: 10px;
+}
+#recordForm #testBorder {
+	position: relative;
+	float: right;
+	margin-top: 25px;
 }
 
 #searchBox .submitBox {
@@ -538,7 +574,8 @@ a:hover {
 .formSet {
 	padding: 10px;
 	font-size: 0.8em;
-
+	overflow:hidden;
+	zoom:1;
 }
 
 .formSet input, .formSet select {
@@ -546,7 +583,14 @@ a:hover {
 	padding: 3px;
 	width: 240px;
 	margin-bottom: 10px;
+	float:left;
 }
+
+.formSet.grid8col input, .formSet.grid8col select {
+	width: 155px;
+	float: left;
+}
+
 
 .formSet select {
 	width: 247px;
@@ -554,6 +598,7 @@ a:hover {
 
 .formSet label {
 	display: block;
+	clear: both;
 }
 
 .formSet textarea { /* used on the challenge page */
@@ -563,7 +608,6 @@ a:hover {
 }
 
 .formSet .help {
-	font-size: 1.2em;
 	float: right;
 }
 
@@ -576,7 +620,7 @@ a:hover {
 }
 
 .formSet.grid8col .grid4col {
-	width: 280px;
+	width: 185px;
 }
 
 .js #toOverflow, #tableoverflow {
@@ -677,9 +721,10 @@ a:hover {
 
 #columnPicker {
 	margin-right: 10px;
+	display: block;
 }
 
-#columnPicker button {
+a#columnPicker {
 	background-color: #767676;	
 	-moz-border-radius: 3px; 
 	-webkit-border-radius: 3px; 
@@ -687,28 +732,35 @@ a:hover {
 	height: 16px;
 	color: white;
 	border: none;
-	padding-bottom: 2px;
+	padding-top: 2px;
+	
 	width: 140px;
+	display: block;
+	text-align:center;
+	overflow:visible;
+	position: relative;
 	
 	-moz-box-shadow: 1px 1px 3px #ccc; 
 	-webkit-box-shadow: 1px 1px 3px #ccc; 
 	box-shadow: 1px 1px 3px #ccc; 
 }
 
-#columnPicker button:hover {
+a#columnPicker:hover {
 	background-color: #3c3c3c;
 }
 
-#columnPicker .columns {
+a#columnPicker span.columns {
 	visibility: hidden;
 	position: absolute;
 	background-color: #ebf1ff;
-	width: 118px;
+	width: 127px;
 	padding: 10px;
 	text-align: right;
 	border: 1px solid #ccc;
 	z-index: 10;
 	font-size: 0.88em;
+	display:block;
+	left:0px;
 	
 	-moz-box-shadow: 1px 1px 3px #333; 
 	-webkit-box-shadow: 1px 1px 3px #333; 
@@ -722,14 +774,36 @@ a:hover {
 	-webkit-border-bottom-left-radius:3px;	
 }
 
-#columnPicker:hover .columns {
+a#columnPicker:hover span.columns {
 	visibility: visible;
 }
 
-#columnPicker .columns span.controls {
+a#columnPicker .columns span.controls {
 	display: block;
+	float: left;
+	font-size: 10px;
+	line-height: 15px;
+	margin-bottom:6px;
+	position:relative;
+	border:none;
+	color: #565656;
+	width: 130px;
+	
 }
-
+a#columnPicker .columns span.controls input {
+	margin-left: 5px;
+	margin-top: 0px;
+	float: right;
+	width: 15px;
+	height: 15px;
+}
+a#columnPicker .columns span.controls label {
+	float: left;
+	width: 100px;
+	display: block;
+	position: relative;
+	z-index: 20;
+}
 
 table#resultsTable, table#resultsTable_Cloned {
 	font-size: 0.8em;
@@ -737,6 +811,7 @@ table#resultsTable, table#resultsTable_Cloned {
 	width: 940px;
 	border-bottom: 1px solid #3c3c3c;
 	margin-bottom: 5px;
+	border-collapse: collapse;
 }
 
 table#resultsTable thead tr, table#resultsTable_Cloned thead tr {
@@ -769,6 +844,9 @@ table#resultsTable thead tr th.noOrder, table#resultsTable_Cloned thead tr th.no
 
 table#resultsTable tr td {
 	padding: 5px;
+	border-collapse: collapse;
+	border-width: 0px;
+	vertical-align: middle;
 }	
 
 table#resultsTable tr td.entityName {
@@ -786,7 +864,6 @@ table#resultsTable tr.even {
 	width: 25px;
 	padding-left: 5px;
 	line-height: 1.3em;
-	position: relative;
 	top: 7px;
 }
 

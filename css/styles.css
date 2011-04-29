@@ -15,6 +15,15 @@ button {
 	cursor: pointer;
 }
 
+pre, code {
+	background-color: #CFD8E8;
+}
+
+pre {
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
 input[type=checkbox], input[type=submit] {
 	cursor: pointer;
 }
@@ -168,7 +177,7 @@ a:hover {
 	background-color: white;
 }
 
-.js .help {
+.help {
 	width: 14px;
 	height: 14px;
 	display: block;
@@ -185,33 +194,35 @@ a:hover {
 	background-position: center center;
 	margin: 2px 0px 0px 5px;
 	position: relative;
+	z-index: 0;
 }
 
 
-.js .help:hover {
+.help:hover {
 	background-color: white;
 	cursor: pointer;
+	z-index: 2;
 }
-.js .help:hover span.helpText, 
-.js #searchBox .help:hover span.heading, 
-.js #searchBox .help:hover span.helpText, 
-.js .help:hover span.heading,
+
+.help:hover span.heading, 
+.help:hover span.helpText,
+#searchBox .help:hover span.helpText,
 .help:hover span.heading span.text,
 .help:hover span.heading span.point
  {
 	visibility: visible;
 }
-.js #searchBox .help span.helpText, 
-.js .help span.helpText {
-	 visibility: hidden; 
+
+.help span.helpText, #searchBox .help span.helpText {
+	visibility: hidden; 
 	display: block;
+	left: 10px;
 	position: absolute;
 	margin-left: 23px;
 	background-color: #ebf1ff;
 	width: 118px;
 	padding: 25px 10px 10px;
 	border: 1px solid #ccc;
-	z-index: 12;
 	font-size: 10.2px;
 	line-height: 14px;
 	text-align: left;
@@ -228,31 +239,30 @@ a:hover {
 	-webkit-border-bottom-left-radius:3px;
 }
 
-.js #searchBox .help span.heading, .js .help span.heading {
-	 visibility: hidden;  
+.help span.heading {
+	visibility: hidden;  
 	background: transparent;
+	position: relative;
+	left: 20px;
+	z-index: 1;
+	float: left;
 	
 }
-.help span.heading span.text,
-#searchBox .help span.heading span.text
- {
+.help span.heading span.text, #searchBox .help span.heading span.text {
 	background-color:#767676;
 	width:126px;
-	float:left;
 	display:block;
 	color: white;
-	display: block;
-	float: left;
 	text-align: left;
-	z-index: 13;
 	zoom: 1;
 	position: absolute;
+	left: 0;
+	z-index: 1;
 	height: 20px; 
 	padding: 0px 10px 0px 10px;
 	font-size: 11px;
-	left: 10px;
 	line-height: 19px;
-	margin: -2px 0px 0px 12px;
+	margin: -2px 0px 0px 10px;
 	text-shadow: 1px 1px 1px #333333;
 	filter: dropshadow(color=#333333, offx=1, offy=1);
 	-moz-border-radius-topright: 3px;
@@ -270,14 +280,13 @@ a:hover {
 }
 
 
-.js #searchBox .help span.heading span.point, .js .help span.heading span.point {
+.help span.heading span.point, #searchBox .help span.heading span.point {
 	width: 0px;
-	display: block;
-	float: left;
+	display: inline-block;
 	position: relative;
+	float: left;
 	line-height: 0px;
 	font-size: 0px;
-	left: 12px;
 	top: -2px;
 	line-height: 0px;
 	font-size: 0px;
@@ -499,6 +508,7 @@ a:hover {
 	bottom: 10px;
     position: absolute;
     right: 10px;
+    z-index: 1;
 }
 
 #testBorder {
@@ -530,6 +540,7 @@ a:hover {
 #searchBox #advancedSearchContainer {
 	width: 334px;
 	margin: 10px 0px 5px;
+	line-height: 0;
 }
 
 #searchBox .advSearchLine {
@@ -932,11 +943,14 @@ a.viewmap {
 
 }
 
-table.companyRecord input {
+table.companyRecord input, table.companyRecord select {
 	border: 1px solid #D5D5D5;
 	padding: 2px;
 	width: 164px;
+}
 
+table.companyRecord select {
+	width: 170px;
 }
 
 table.companyRecord tr.current {
@@ -981,6 +995,3 @@ table.companyRecord tr.current td.field {
 .footer ul {
 	
 }
-
-
-

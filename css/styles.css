@@ -55,6 +55,10 @@ a:hover {
 	color: #8facff;
 }
 
+a.noBorder:hover {
+	border-bottom: none;
+}
+
 
 /*=================================== Header Bar */
 

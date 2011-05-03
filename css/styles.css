@@ -55,6 +55,10 @@ a:hover {
 	color: #8facff;
 }
 
+a.noBorder:hover {
+	border-bottom: none;
+}
+
 
 /*=================================== Header Bar */
 
@@ -214,6 +218,7 @@ a:hover {
 }
 
 .help span.helpText, #searchBox .help span.helpText {
+	color: #333;
 	visibility: hidden; 
 	display: block;
 	left: 10px;

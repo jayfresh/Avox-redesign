@@ -203,6 +203,7 @@ a:hover {
 }
 .js #searchBox .help span.helpText, 
 .js .help span.helpText {
+	color: #333;
 	 visibility: hidden; 
 	display: block;
 	position: absolute;
